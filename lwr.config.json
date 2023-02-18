@@ -1,0 +1,44 @@
+{
+  "lwc": {
+    "modules": [
+      { "dir": "$rootDir/src/modules" },
+      { "npm": "lightning-base-components" }
+    ]
+  },
+  "assets": [
+    {
+      "alias": "assetsDir",
+      "dir": "$rootDir/src/assets",
+      "urlPath": "/assets"
+    },
+    {
+      "dir": "$rootDir/src/assets/fonts",
+      "urlPath": "/fonts"
+    },
+    {
+      "file": "$rootDir/src/assets/utilitySprite.svg",
+      "urlPath": "/lightning.utilitySprite"
+    }
+  ],
+  "routes": [
+        {
+        "id": "app",
+        "path": "/",
+        "rootComponent": "components/app",
+        "layoutTemplate": "$layoutsDir/main_layout.njk",
+        "properties": { "staticParam": "This is the Home page" },
+        "bootstrap": {
+            "syntheticShadow": true
+        }
+    },
+    {
+      "id": "About",
+      "path": "/about",
+      "contentTemplate": "$contentDir/about.md",
+      "layoutTemplate": "$layoutsDir/main_layout.njk",
+      "bootstrap": {
+        "syntheticShadow": true
+      }
+    }
+  ]
+}
